@@ -1,28 +1,22 @@
 ---
-// Ici, on peux ajouter du code, des fichiers ou des variables que l'on pouras ensuite utiliser dans l'HTML
-
-// On importe le composant Icon de astro-icon pour pouvoir l'utiliser dans notre HTML
 import { Icon } from "astro-icon/components";
-import "../assets/app.css";
+import Layout from "../layouts/main.astro";
+import DiscordCard from "../components/DiscordCard.astro";
+import ServerCard from "../components/ServerCard.astro";
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="w-screen">
-    <!-- Ce tag avec la classe "prose" réactive le style des composants h* -->
-    <article class="prose prose-md mx-auto my-4 text-center">
-      <!-- MX ajoute de la marge sur l'axe X et MY ajoute de la marge sur l'axe Y (ici 4rem)
-	La liste des valeurs possible est sur tailwindcss.com -->
-      <h1 class="inline-flex align-baseline">
-        <Icon name="skill-icons:rocket" class="mr-2 align-baseline" />
-        Mon premier site avec Astro <h1></h1>
-      </h1>
-    </article>
-  </body>
-</html>
+<Layout>
+  <div class="w-screen h-screen flex justify-center items-center">
+    <div class="card backdrop-blur-lg bg-white/10 rounded-2xl shadow-lg overflow-hidden border border-2 border-white/20 transition-all duration-300 hover:shadow-xl hover:border-white/30">
+      <div class="card-body max-sm:card-compact flex flex-col items-center">
+
+        <img src="https://github.com/Funasitien.png" class="rounded-full h-32 w-32" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <DiscordCard />
+          <ServerCard />
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
