@@ -1,2 +1,12 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+    themes: pastel --default;
+}
+
+@font-face {
+    font-family: "Minecraft Five";
+    src:
+      local("Minecraft Five"),
+      url("https://mctitles.com/fonts/official/MinecraftFive.ttf") format("opentype"),
+  }
+  
