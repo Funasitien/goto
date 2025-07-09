@@ -3,6 +3,8 @@
     themes: pastel --default;
 }
 
+
+
 @font-face {
     font-family: "Minecraft Five";
     src:
@@ -10,3 +12,8 @@
       url("https://mctitles.com/fonts/official/MinecraftFive.ttf") format("opentype"),
   }
   
+
+  :root {
+  --font: "Poppins";
+  --default-font-family: "Poppins" !important;
+}
