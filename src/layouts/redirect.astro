@@ -1,6 +1,7 @@
 ---
 import Loading from "../components/Loading.astro"
 import "../assets/app.css"
+const { url } = Astro.props;
 ---
 
 <html lang="fr">
@@ -9,7 +10,9 @@ import "../assets/app.css"
     <link rel="icon" type="image/png" href="/dream.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <meta http-equiv="refresh" content=`0; url=${url}` />
+    <title>Funasitien.Go</title>
+</head>
   </head>
   <body class="w-screen">
     <Loading />
